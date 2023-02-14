@@ -1,0 +1,18 @@
+version: "2.1"
+services:
+  duplicati:
+    image: ghcr.io/linuxserver/duplicati:latest
+    container_name: duplicati
+    hostname: duplicati
+    environment:
+      - PUID=0
+      - PGID=0
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/timezone:/etc/timezone:ro
+      - ${CONFIG_HOME}/duplicati/config:/config
+      - ${MOUNT_DATA}/backups:/backups
+      - ${BKUP_DATA}:/source
+    ports:
+      - 8200:8200
+    restart: unless-stopped
