@@ -15,5 +15,4 @@ services:
       - ${BKUP_DATA}:/source
     ports:
       - 8200:8200
-      # DALE PAPAAAAAAAAAA
     restart: unless-stopped
