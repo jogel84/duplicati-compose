@@ -15,4 +15,5 @@ services:
       - ${BKUP_DATA}:/source
     ports:
       - 8200:8200
+      - 8081:8081
     restart: unless-stopped
