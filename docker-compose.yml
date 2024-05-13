@@ -1,6 +1,6 @@
 services:
   duplicati:
-    image: linuxserver/duplicati:latest
+    image: linuxserver/duplicati:${CONTAINER_DUPLICATI_VERSION}
     container_name: duplicati
     hostname: duplicati
     environment:
